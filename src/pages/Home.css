@@ -1,0 +1,439 @@
+/**
+ * Home Page Styles
+ * Includes hero section with parallax, product cards, quality banner, and FAQ accordion
+ */
+
+/* Hero Section - Full viewport with parallax background */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: var(--white);
+  text-align: center;
+}
+
+/* Parallax Background with zoom animation */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--light-blue) 100%);
+  /* TODO: Replace with actual background image */
+  /* background-image: url('/path/to/industrial-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+  animation: zoomInOut 20s ease-in-out infinite;
+  z-index: -1;
+}
+
+/* Zoom in/out animation for parallax effect */
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.hero-slogan {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.hero-cta {
+  font-size: 1.125rem;
+  padding: 15px 40px;
+  animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--white);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+/* Who We Are Section */
+.who-we-are {
+  background-color: var(--light-beige);
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.placeholder-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--accent-beige), var(--primary-beige));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.content-column p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Products Preview Section */
+.products-preview {
+  background-color: var(--white);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+}
+
+.product-image {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.25rem;
+  font-weight: 600;
+  /* TODO: Replace with actual product images */
+  /* background-image: url('/path/to/product-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+}
+
+.product-info {
+  padding: 2rem;
+}
+
+.product-info h3 {
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.product-info p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Quality Commitment Section */
+.quality-commitment {
+  background-color: var(--light-beige);
+}
+
+.quality-banner {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.quality-image-overlay {
+  min-height: 400px;
+  background: linear-gradient(rgba(30, 58, 138, 0.9), rgba(59, 130, 246, 0.85));
+  /* TODO: Replace with actual factory image */
+  /* background-image: url('/path/to/factory-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.quality-content {
+  text-align: center;
+  color: var(--white);
+  max-width: 700px;
+}
+
+.quality-content h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.quality-points {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.quality-points li {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+/* Contact Brief Section */
+.contact-brief {
+  background-color: var(--white);
+}
+
+.contact-brief-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.contact-info-item {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light-beige);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.info-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info-item h4 {
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.contact-info-item p {
+  margin-bottom: 0.25rem;
+  color: var(--dark-text);
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: var(--light-beige);
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--dark-text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--primary-blue);
+}
+
+.faq-icon {
+  color: var(--primary-blue);
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+  padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+  line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-slogan {
+    font-size: 1.25rem;
+  }
+
+  .two-column-layout {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-slogan {
+    font-size: 1.1rem;
+  }
+
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .products-grid {
+    gap: 2rem;
+  }
+
+  .quality-image-overlay {
+    min-height: 350px;
+    padding: 2rem;
+  }
+
+  .quality-content h2 {
+    font-size: 2rem;
+  }
+
+  .contact-info-grid {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-slogan {
+    font-size: 1rem;
+  }
+
+  .hero-cta {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  .product-info {
+    padding: 1.5rem;
+  }
+
+  .quality-image-overlay {
+    padding: 1.5rem;
+  }
+
+  .quality-points li {
+    font-size: 1rem;
+  }
+
+  .faq-question {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,246 @@
+/**
+ * About Page Styles
+ * Clean layout with mission/vision cards in blue backgrounds
+ */
+
+/* Page Header */
+.about-header {
+  background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+  color: var(--white);
+  padding: 4rem 0 3rem;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3rem;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: var(--primary-beige);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Main Content */
+.about-content {
+  background-color: var(--white);
+}
+
+.content-block {
+  margin-bottom: 2rem;
+}
+
+.large-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--light-text);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Image Container */
+.about-image-container {
+  margin: 3rem 0;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.placeholder-large-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--accent-beige), var(--primary-beige));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  /* TODO: Replace with actual image */
+  /* background-image: url('/path/to/factory-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Mission and Vision Section */
+.mission-vision-section {
+  background-color: var(--light-beige);
+}
+
+.mission-vision-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.mission-vision-card {
+  background: var(--primary-blue);
+  color: var(--white);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.mission-card {
+  background: linear-gradient(135deg, var(--primary-blue), var(--light-blue));
+}
+
+.vision-card {
+  background: linear-gradient(135deg, var(--light-blue), var(--accent-blue));
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-beige);
+}
+
+.mission-vision-card h2 {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mission-vision-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mission-vision-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.list-icon {
+  color: var(--primary-beige);
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+/* Company Stats Section */
+.stats-section {
+  background-color: var(--white);
+  padding: 4rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--light-beige);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  background: var(--primary-beige);
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: var(--light-text);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-header {
+    padding: 3rem 0 2rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .large-text {
+    font-size: 1rem;
+  }
+
+  .mission-vision-grid {
+    gap: 2rem;
+  }
+
+  .mission-vision-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .mission-vision-card h2 {
+    font-size: 1.75rem;
+  }
+
+  .mission-vision-list li {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.75rem;
+  }
+
+  .mission-vision-card {
+    padding: 1.5rem;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}

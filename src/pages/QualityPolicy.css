@@ -1,0 +1,290 @@
+/**
+ * Quality Policy Page Styles
+ * Hero banner with overlay and quality points with checkmarks
+ */
+
+/* Hero Section */
+.quality-hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.quality-hero-overlay {
+  height: 100%;
+  background: linear-gradient(rgba(30, 58, 138, 0.85), rgba(59, 130, 246, 0.75));
+  /* TODO: Replace with actual factory/manufacturing image */
+  /* background-image: url('/path/to/factory-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quality-hero-content {
+  text-align: center;
+  color: var(--white);
+  padding: 2rem;
+}
+
+.quality-hero-title {
+  font-size: 3.5rem;
+  color: var(--white);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease;
+}
+
+/* Quality Content Section */
+.quality-content-section {
+  background-color: var(--white);
+}
+
+.quality-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Quality Points Container */
+.quality-points-container {
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quality-point-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: var(--light-beige);
+  border-radius: 12px;
+  border-left: 5px solid var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.quality-point-card:hover {
+  background: var(--primary-beige);
+  transform: translateX(10px);
+  box-shadow: var(--shadow-md);
+}
+
+.quality-point-icon {
+  flex-shrink: 0;
+  font-size: 2rem;
+  color: var(--primary-blue);
+}
+
+.quality-point-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--dark-text);
+  margin: 0;
+}
+
+/* Quality Assurance Process */
+.quality-additional-info {
+  margin-bottom: 4rem;
+}
+
+.quality-additional-info h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 3rem;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.process-card {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.process-number {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-blue);
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.process-card h4 {
+  color: var(--primary-blue);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.process-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--light-text);
+  margin: 0;
+}
+
+/* Quality Certifications */
+.quality-certifications {
+  text-align: center;
+  background: var(--light-beige);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+}
+
+.quality-certifications h3 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 3rem;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.certification-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.certification-badge {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-blue);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.certification-card h4 {
+  color: var(--primary-blue);
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.certification-card p {
+  font-size: 0.95rem;
+  color: var(--light-text);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quality-hero {
+    height: 400px;
+  }
+
+  .quality-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .quality-points-container {
+    margin-bottom: 3rem;
+  }
+
+  .quality-point-card {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  .quality-point-icon {
+    font-size: 1.5rem;
+  }
+
+  .quality-point-text {
+    font-size: 1rem;
+  }
+
+  .quality-additional-info h3,
+  .quality-certifications h3 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .process-grid {
+    gap: 1.5rem;
+  }
+
+  .process-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .process-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .process-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .quality-certifications {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quality-hero {
+    height: 300px;
+  }
+
+  .quality-hero-title {
+    font-size: 2rem;
+  }
+
+  .quality-point-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-badge {
+    width: 70px;
+    height: 70px;
+    font-size: 1.25rem;
+  }
+}
