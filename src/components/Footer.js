@@ -28,8 +28,8 @@ const Footer = () => {
             <div className="footer-logo-box">Logo</div>
           </div>
           <p className="footer-description">
-            Leading manufacturer of premium polypropylene multifilament yarns and 
-            bag closing threads, serving industries with quality and reliability since 2015.
+            Manufacturer of recycled PPCP injection-grade granules, delivering consistent 
+            quality and reliable supply for injection moulding applications since 2024.
           </p>
         </div>
 

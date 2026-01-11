@@ -6,12 +6,12 @@
 
 /* CSS Variables for consistent theming */
 :root {
-  --primary-blue: #1e3a8a;
-  --light-blue: #3b82f6;
-  --accent-blue: #60a5fa;
-  --primary-beige: #f5f5dc;
-  --light-beige: #faf8f3;
-  --accent-beige: #e8dcc4;
+  --primary-blue: #135A96;
+  --light-blue: #2AAEC1;
+  --accent-blue: #5CE1E6;
+  --primary-beige: #9DCEF6;
+  --light-beige: #D1FBFD;
+  --accent-beige: #9DCEF6;
   --dark-text: #1f2937;
   --light-text: #6b7280;
   --white: #ffffff;

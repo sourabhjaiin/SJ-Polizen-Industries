@@ -35,15 +35,15 @@ const Products = () => {
   // Product data
   const products = [
     {
-      id: 'multifilament',
-      name: 'Polypropylene Multifilament',
-      description: 'High-tenacity multifilament yarns designed for durability and versatility across multiple applications.',
+      id: 'black-ppcp-granules',
+      name: 'Black PPCP Injection Grade Granules',
+      description: 'Black PPCP recycled granules suitable for general injection moulding applications requiring good impact strength and stable flow.',
       image: null // TODO: Add actual product image
     },
     {
-      id: 'bag-closing-thread',
-      name: 'Bag Closing Thread',
-      description: 'Strong, reliable threads specifically engineered for industrial bag closing and stitching operations.',
+      id: 'premium-ppcp-granules',
+      name: 'Colour/Black Granules',
+      description: 'Low-filler recycled PPCP granules developed for applications requiring higher impact strength, better surface finish, and improved consistency.',
       image: null // TODO: Add actual product image
     }
   ];
@@ -55,7 +55,7 @@ const Products = () => {
         <div className="container">
           <h1 className="page-title">Our Products</h1>
           <p className="page-subtitle">
-            Premium Polypropylene Solutions for Every Industry
+            Injection-Grade Recycled PPCP Granules
           </p>
         </div>
       </section>
@@ -93,23 +93,23 @@ const Products = () => {
             <div className="info-grid">
               <div className="info-card">
                 <div className="info-icon">✓</div>
-                <h4>Premium Quality</h4>
-                <p>Virgin-grade raw materials ensure superior product quality</p>
+                <h4>Consistent Quality</h4>
+                <p>Injection-grade recycled PPCP granules engineered for stable processing and minimal rejection rates</p>
               </div>
               <div className="info-card">
                 <div className="info-icon">✓</div>
-                <h4>Customization</h4>
-                <p>Tailored specifications to meet your exact requirements</p>
+                <h4>Application-Focused Grades</h4>
+                <p>Purpose-built materials for crates, bins, chairs, stools, and general injection moulding applications</p>
               </div>
               <div className="info-card">
                 <div className="info-icon">✓</div>
-                <h4>Competitive Pricing</h4>
-                <p>Best value without compromising on quality</p>
+                <h4>Fair & Competitive Pricing</h4>
+                <p>Transparent pricing structure balancing cost efficiency with dependable performance</p>
               </div>
               <div className="info-card">
                 <div className="info-icon">✓</div>
-                <h4>Timely Delivery</h4>
-                <p>Reliable supply chain and on-time deliveries</p>
+                <h4>Dependable Supply</h4>
+                <p>Consistent deliveries and responsive service to keep your production running without interruption</p>
               </div>
             </div>
           </div>

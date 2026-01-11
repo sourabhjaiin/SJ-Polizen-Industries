@@ -1,3 +1,4 @@
+
 /**
  * Product Detail Page Component
  * Displays detailed information about specific products
@@ -38,26 +39,29 @@ const ProductDetail = () => {
 
   // Product data with specifications
   const productData = {
-    'multifilament': {
-      name: 'Polypropylene Multifilament',
-      description: 'Our polypropylene multifilament yarns are manufactured using virgin-grade raw materials and advanced spinning technology. These yarns offer exceptional tensile strength, UV resistance, and color fastness, making them ideal for outdoor and industrial applications. Available in various deniers and colors, our multifilament yarns serve industries ranging from fishing and agriculture to geotextiles and construction.',
+    'black-ppcp-granules': {
+      name: 'Black PPCP Injection Grade Granules',
+      description: 'Black PPCP recycled granules suitable for general injection moulding applications requiring good impact strength and stable flow. These granules deliver consistent quality for injection moulding, making them ideal for manufacturers producing crates, bins, chairs, and other moulded products.',
       specifications: [
-        { property: 'Denier Range', specification: '500D - 5000D' },
-        { property: 'Tensile Strength', specification: '3.5 - 5.5 g/d' },
-        { property: 'Elongation', specification: '20% - 25%' },
-        { property: 'UV Stabilization', specification: 'Available' },
-        { property: 'Color Options', specification: 'Custom & Standard' }
+        { property: 'MFI', specification: '8–12' },
+        { property: 'Application', specification: 'Crates, bins, chairs' },
+        { property: 'Price Range', specification: '₹75–95/kg (grade & volume dependent)' },
+        { property: 'Packaging', specification: '25 kg bags' },
+        { property: 'MOQ', specification: '500 kg' },
+        { property: 'Trial Samples', specification: 'Available' }
       ]
     },
-    'bag-closing-thread': {
-      name: 'Bag Closing Thread',
-      description: 'Our bag closing threads are engineered for high-speed industrial sewing machines, providing consistent performance and minimal breakage. Made from premium polypropylene, these threads offer excellent knot strength and abrasion resistance, ensuring secure bag closures for cement, fertilizers, and agricultural products.',
+    'premium-ppcp-granules': {
+      name: 'Colour/Black Granules',
+      description: 'Low-filler recycled Coloured/Black PPCP granules developed for injection moulding applications that require higher impact strength, better surface finish, and improved consistency compared to standard grades. This grade is suitable for moulders looking to reduce breakage, improve cycle stability, and maintain consistent performance across batches.',
       specifications: [
-        { property: 'Thread Count', specification: '2/18, 2/24, 2/36' },
-        { property: 'Breaking Load', specification: '8-12 kg' },
-        { property: 'Twist', specification: 'S/Z Twist Available' },
-        { property: 'Lubrication', specification: 'Pre-lubricated' },
-        { property: 'Packaging', specification: 'Cone/Spool' }
+        { property: 'MFI', specification: '8–11' },
+        { property: 'Application', specification: 'Heavy-duty crates, chair components, thick-wall moulded products' },
+        { property: 'Filler Content', specification: 'Controlled, low filler' },
+        { property: 'Price Range', specification: '₹90–110/kg (grade & volume dependent)' },
+        { property: 'Packaging', specification: '25 kg bags' },
+        { property: 'MOQ', specification: '500 kg' },
+        { property: 'Trial Samples', specification: 'Available' }
       ]
     }
   };

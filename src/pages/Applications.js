@@ -35,16 +35,14 @@ const Applications = () => {
 
   // Applications data
   const applications = [
-    { id: 1, name: 'Fishing Nets', description: 'Durable nets for commercial and recreational fishing' },
-    { id: 2, name: 'Geo-textiles', description: 'Soil stabilization and erosion control solutions' },
-    { id: 3, name: 'PP Carpet Mats', description: 'Heavy-duty carpets for industrial and commercial use' },
-    { id: 4, name: 'Agriculture Twines', description: 'Strong binding twines for agricultural applications' },
-    { id: 5, name: 'Safety Nets', description: 'Protective netting for construction and safety' },
-    { id: 6, name: 'Construction Ropes', description: 'High-strength ropes for construction projects' },
-    { id: 7, name: 'Industrial Slings', description: 'Heavy-duty lifting and cargo securing slings' },
-    { id: 8, name: 'Packaging Materials', description: 'Secure packaging solutions for various industries' },
-    { id: 9, name: 'Sutli & Ropes', description: 'Versatile cords for binding and bundling' },
-    { id: 10, name: 'Tarpaulin Fabrics', description: 'Weather-resistant covering materials' }
+    { id: 1, name: 'Crates & Pallets', description: 'Durable injection-moulded crates and pallets for logistics, storage, and industrial handling.' },
+    { id: 2, name: 'Dustbins & Waste Management Products', description: 'Injection-moulded bins and containers designed for municipal, commercial, and industrial use.' },
+    { id: 3, name: 'Chairs & Furniture Components', description: 'Chair bases, legs, wheels, and structural components requiring good impact strength and durability.' },
+    { id: 4, name: 'Household Utility Products', description: 'Buckets, tubs, containers, and general household moulded items for daily use.' },
+    { id: 5, name: 'Industrial Injection Moulded Parts', description: 'General-purpose industrial components where consistent processing and cost efficiency are critical.' },
+    { id: 6, name: 'Storage Boxes & Containers', description: 'Injection-moulded storage solutions used in homes, warehouses, and factories.' },
+    { id: 7, name: 'Automotive Non-Critical Components', description: 'Non-load bearing and interior plastic parts where recycled PPCP is suitable (selective use).' },
+    { id: 8, name: 'Custom Injection Moulded Applications', description: 'Application-specific moulded products developed in consultation with customer requirements.' }
   ];
 
   return (
@@ -54,7 +52,7 @@ const Applications = () => {
         <div className="container">
           <h1 className="page-title">Applications of Our Products</h1>
           <p className="page-subtitle">
-            Serving Diverse Industries with Tailored Solutions
+            Supporting Everyday Injection Moulding Applications
           </p>
         </div>
       </section>
@@ -71,9 +69,6 @@ const Applications = () => {
               >
                 {/* TODO: Replace with actual application images */}
                 <div className="application-image">
-                  <div className="image-overlay">
-                    <span className="overlay-text">Learn More</span>
-                  </div>
                   <div className="image-placeholder">
                     <span>{app.name}</span>
                   </div>
@@ -89,28 +84,26 @@ const Applications = () => {
 
           {/* Additional Information */}
           <div className="applications-info-section fade-in">
-            <h2>Custom Solutions for Your Industry</h2>
+            <h2>Custom Solutions for Injection Moulding</h2>
             <p>
-              Our polypropylene products are engineered to meet the specific demands 
-              of various industries. Whether you need custom colors, specific tensile 
-              strengths, or specialized packaging, we work closely with you to deliver 
-              products that perfectly match your requirements.
+              Our recycled PPCP granules are tailored to meet the practical needs of 
+              injection moulders, with flexibility in grade, appearance, and supply.
             </p>
             <div className="info-features">
               <div className="feature-box">
                 <span className="feature-icon">🎨</span>
-                <h4>Custom Colors</h4>
-                <p>Wide range of color options available</p>
+                <h4>Colour Options</h4>
+                <p>Black and select application-specific colours available on trial approval.</p>
               </div>
               <div className="feature-box">
-                <span className="feature-icon">💪</span>
-                <h4>Variable Strength</h4>
-                <p>Tailored tensile strength specifications</p>
+                <span className="feature-icon">⚙️</span>
+                <h4>Application-Focused Grades</h4>
+                <p>Material tuned for flow behaviour, impact performance, and stable processing.</p>
               </div>
               <div className="feature-box">
                 <span className="feature-icon">📦</span>
-                <h4>Flexible Packaging</h4>
-                <p>Custom packaging to suit your needs</p>
+                <h4>Flexible Supply</h4>
+                <p>Packaging and order quantities adjusted to suit production requirements.</p>
               </div>
             </div>
           </div>

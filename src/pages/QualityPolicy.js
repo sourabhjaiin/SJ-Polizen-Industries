@@ -34,11 +34,26 @@ const QualityPolicy = () => {
 
   // Quality policy points
   const qualityPoints = [
-    'We adhere to ISO 9001:2015 quality management standards in all our manufacturing processes',
-    'Every batch undergoes rigorous testing for tensile strength, elongation, and uniformity before dispatch',
-    'We source only virgin-grade raw materials from certified suppliers to ensure product consistency',
-    'Our quality control team conducts regular audits and maintains detailed documentation for traceability',
-    'Continuous training programs ensure our workforce stays updated with latest quality protocols and best practices'
+    {
+      title: 'Controlled Processing',
+      description: 'Disciplined sourcing, blending, and processing to ensure reliable injection-grade performance.'
+    },
+    {
+      title: 'Batch-Wise Checks',
+      description: 'Each batch is verified for visual consistency and stable melt behaviour before dispatch.'
+    },
+    {
+      title: 'Selected Raw Materials',
+      description: 'Carefully chosen PPCP scrap suitable for injection moulding with controlled filler levels.'
+    },
+    {
+      title: 'Traceability',
+      description: 'Every batch is identified and documented for accountability and review.'
+    },
+    {
+      title: 'Continuous Improvement',
+      description: 'Customer feedback is used to refine quality and process consistency.'
+    }
   ];
 
   return (
@@ -59,7 +74,7 @@ const QualityPolicy = () => {
           <div className="quality-intro fade-in">
             <h2 className="section-title">Our Quality Policy</h2>
             <p className="section-subtitle">
-              Committed to Excellence at Every Step
+              Committed to Consistent Performance
             </p>
           </div>
 
@@ -70,7 +85,10 @@ const QualityPolicy = () => {
                 <div className="quality-point-icon">
                   <FaCheckCircle />
                 </div>
-                <p className="quality-point-text">{point}</p>
+                <div className="quality-point-content">
+                  <h4 className="quality-point-title">{point.title}</h4>
+                  <p className="quality-point-text">{point.description}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -81,52 +99,48 @@ const QualityPolicy = () => {
             <div className="process-grid">
               <div className="process-card">
                 <div className="process-number">1</div>
-                <h4>Raw Material Inspection</h4>
+                <h4>Raw Material Evaluation</h4>
                 <p>
-                  Stringent quality checks on all incoming raw materials from 
-                  certified suppliers
+                  Incoming PPCP scrap is checked for type, contamination, moisture, 
+                  and injection suitability
                 </p>
               </div>
               
               <div className="process-card">
                 <div className="process-number">2</div>
-                <h4>In-Process Monitoring</h4>
+                <h4>Controlled Processing</h4>
                 <p>
-                  Continuous monitoring during production to maintain consistent 
-                  quality standards
+                  Blending and processing with controlled filler levels and proper 
+                  filtration for consistent melt flow
                 </p>
               </div>
               
               <div className="process-card">
                 <div className="process-number">3</div>
-                <h4>Final Product Testing</h4>
+                <h4>Batch-wise Quality Checks</h4>
                 <p>
-                  Comprehensive testing of finished products including tensile 
-                  strength and durability
+                  Finished granules verified for visual uniformity, melt behaviour, 
+                  and processing stability before dispatch
                 </p>
               </div>
               
               <div className="process-card">
                 <div className="process-number">4</div>
-                <h4>Documentation & Traceability</h4>
+                <h4>Batch Identification</h4>
                 <p>
-                  Complete documentation of all quality parameters for full 
-                  product traceability
+                  Each batch is identified and documented to ensure traceability 
+                  and accountability
                 </p>
               </div>
-            </div>
-          </div>
 
-          {/* Quality Certifications */}
-          <div className="quality-certifications fade-in">
-            <h3>Certifications & Standards</h3>
-            <div className="certifications-grid">
-              <div className="certification-card">
-                <div className="certification-badge">ISO</div>
-                <h4>ISO 9001:2015</h4>
-                <p>Quality Management Systems</p>
+              <div className="process-card">
+                <div className="process-number">5</div>
+                <h4>Continuous Improvement</h4>
+                <p>
+                  Customer feedback and production observations used to continuously 
+                  refine quality and consistency
+                </p>
               </div>
-              {/* Add more certifications as needed */}
             </div>
           </div>
         </div>

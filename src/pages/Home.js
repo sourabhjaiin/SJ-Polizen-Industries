@@ -49,23 +49,43 @@ const Home = () => {
   const faqs = [
     {
       question: "When was SJ Polyzen established?",
-      answer: "SJ Polyzen Industries was established in 2015, bringing over 8 years of manufacturing excellence to the polypropylene industry."
+      answer: "SJ Polyzen Industries was established in 2024 with a focus on manufacturing reliable recycled PPCP injection-grade granules."
     },
     {
-      question: "Where is the company located?",
-      answer: "We are located at 399 LIG Mukharjee Nagar, Dewar, Madhya Pradesh, 455001, India."
+      question: "Where is SJ Polyzen located?",
+      answer: "We are located in Sanwer, Indore (Madhya Pradesh, India), serving customers across major injection moulding clusters."
     },
     {
-      question: "What products do you manufacture?",
-      answer: "We specialize in polypropylene multifilament yarns and bag closing threads for various industrial applications."
+      question: "What products does SJ Polyzen manufacture?",
+      answer: "We manufacture recycled PPCP (Polypropylene Copolymer) injection-grade granules, primarily in black and application-specific grades."
     },
     {
-      question: "Do you provide customized solutions?",
-      answer: "Yes, we offer customized yarn specifications based on client requirements including color, denier, and tensile strength."
+      question: "What applications are your recycled PPCP granules suitable for?",
+      answer: "Our products are suitable for crates, dustbins, chairs, furniture components, storage containers, and general household and industrial injection-moulded items."
     },
     {
-      question: "What is your delivery time?",
-      answer: "Standard delivery time is 7-10 business days, depending on order volume and location."
+      question: "Do you offer customized or application-specific grades?",
+      answer: "Yes. We offer application-focused grades with controlled filler levels and processing behaviour, developed based on customer requirements and trial approval."
+    },
+    {
+      question: "What colour options are available?",
+      answer: "We primarily supply black PPCP granules, along with select application-specific colour options based on feasibility and order volume."
+    },
+    {
+      question: "What is the typical melt flow range of your products?",
+      answer: "Our recycled PPCP injection grades typically fall within an MFI range of 8–12, depending on application requirements."
+    },
+    {
+      question: "What is the minimum order quantity (MOQ)?",
+      answer: "The standard minimum order quantity is 100 kg, depending on grade and availability."
+    },
+    {
+      question: "Do you provide trial samples before bulk supply?",
+      answer: "Yes. We encourage trial samples so customers can evaluate material performance on their own machines before confirming bulk orders."
+    },
+    {
+      question: "What are your delivery timelines?",
+      answer: "Delivery timelines depend on order quantity, grade, and location, but we aim for prompt and reliable dispatch to support uninterrupted production."
     }
   ];
 
@@ -99,7 +119,7 @@ const Home = () => {
           <div className="two-column-layout">
             {/* Image Column - TODO: Replace with actual company/factory image */}
             <div className="image-column fade-in">
-              <div className="placeholder-image">
+              <div className="placeholder-image large">
                 <span>Company Image</span>
               </div>
             </div>
@@ -107,16 +127,20 @@ const Home = () => {
             {/* Content Column */}
             <div className="content-column fade-in">
               <p>
-                SJ Polyzen Industries is a leading manufacturer of high-quality polypropylene 
-                multifilament yarns and bag closing threads, based in Dewar, Madhya Pradesh. 
-                With years of expertise in the textile industry, we pride ourselves on delivering 
-                products that meet international quality standards while maintaining competitive pricing.
+                SJ Polyzen Industries is a recycled PPCP (Polypropylene Copolymer) injection-grade granules company, 
+                focused on supplying dependable material for everyday injection moulding applications. 
+                Our products are developed for manufacturers producing crates, dustbins, chairs, stools, 
+                and other general household and industrial moulded items where consistent machine 
+                performance and cost efficiency matter. We specialize in recycled PPCP grades that are 
+                practical, workable, and aligned with real shop-floor requirements rather than theoretical claims.
               </p>
               <p>
-                Our state-of-the-art manufacturing facility is equipped with advanced machinery and 
-                operated by skilled professionals who ensure every product meets stringent quality 
-                benchmarks. We serve diverse industries including agriculture, packaging, construction, 
-                and fishing, providing customized solutions that cater to specific client requirements.
+                Our approach is built on process discipline, controlled sourcing, and honest grade 
+                positioning. We focus on stable melt flow, controlled filler content, and repeatable 
+                batch behavior so that moulders experience fewer machine issues and lower rejection. 
+                Instead of selling "generic recycled plastic," we aim to be a reliable supply partner, 
+                offering materials that perform predictably and support long-term manufacturing 
+                relationships based on trust, clarity, and consistency.
               </p>
             </div>
           </div>
@@ -129,37 +153,37 @@ const Home = () => {
           <h2 className="section-title fade-in">Our Products</h2>
           
           <div className="products-grid fade-in">
-            {/* Product Card 1: Polypropylene Multifilament */}
+            {/* Product Card 1: Black PPCP Injection Grade Granules */}
             <div className="product-card">
               {/* TODO: Replace with actual product image */}
               <div className="product-image">
-                <span>Multifilament Yarn</span>
+                <span>Black PPCP Granules</span>
               </div>
               <div className="product-info">
-                <h3>Polypropylene Multifilament</h3>
+                <h3>Black PPCP Injection Grade Granules</h3>
                 <p>
-                  High-tenacity multifilament yarns designed for durability and 
-                  versatility across multiple applications.
+                  Black PPCP recycled granules suitable for general injection moulding 
+                  applications requiring good impact strength and stable flow.
                 </p>
-                <Link to="/products/multifilament" className="btn btn-secondary">
+                <Link to="/products/black-ppcp-granules" className="btn btn-secondary">
                   View More
                 </Link>
               </div>
             </div>
 
-            {/* Product Card 2: Bag Closing Thread */}
+            {/* Product Card 2: Colour/Black Granules */}
             <div className="product-card">
               {/* TODO: Replace with actual product image */}
               <div className="product-image">
-                <span>Bag Closing Thread</span>
+                <span>Colour/Black Granules</span>
               </div>
               <div className="product-info">
-                <h3>Bag Closing Thread</h3>
+                <h3>Colour/Black Granules</h3>
                 <p>
-                  Strong, reliable threads specifically engineered for industrial 
-                  bag closing and stitching operations.
+                  Low-filler recycled PPCP granules for applications requiring higher 
+                  impact strength, better surface finish, and improved consistency.
                 </p>
-                <Link to="/products/bag-closing-thread" className="btn btn-secondary">
+                <Link to="/products/premium-ppcp-granules" className="btn btn-secondary">
                   View More
                 </Link>
               </div>
@@ -183,9 +207,11 @@ const Home = () => {
               <div className="quality-content">
                 <h2>Our Commitment to Quality</h2>
                 <ul className="quality-points">
-                  <li>✓ ISO 9001:2015 certified quality management</li>
-                  <li>✓ Rigorous testing of every batch before dispatch</li>
-                  <li>✓ Virgin-grade raw materials from certified suppliers</li>
+                  <li>✓ Process-driven quality control at every stage</li>
+                  <li>✓ Batch-wise inspection before dispatch</li>
+                  <li>✓ Controlled raw material sourcing</li>
+                  <li>✓ Focus on repeatability, not one-time supply</li>
+                  <li>✓ Trial-based approval philosophy</li>
                 </ul>
                 <Link to="/quality" className="btn btn-primary">
                   Read Our Complete Quality Policy
@@ -265,3 +291,4 @@ const Home = () => {
 };
 
 export default Home;
+

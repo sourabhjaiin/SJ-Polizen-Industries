@@ -39,7 +39,7 @@ const About = () => {
         <div className="container">
           <h1 className="page-title">About SJ Polyzen Industries</h1>
           <p className="page-subtitle">
-            Building Excellence in Polypropylene Manufacturing Since 2015
+            Recycled PPCP Injection-Grade Granules Manufacturer
           </p>
         </div>
       </section>
@@ -49,21 +49,22 @@ const About = () => {
         <div className="container">
           <div className="content-block fade-in">
             <p className="large-text">
-              Founded with a vision to revolutionize the polypropylene yarn industry in 
-              central India, SJ Polyzen Industries has grown from a small-scale unit to a 
-              recognized name in manufacturing excellence. Our journey began with a commitment 
-              to quality, innovation, and customer satisfaction - principles that continue to 
-              guide us today.
+              SJ Polyzen Industries is a manufacturer and supplier of recycled PPCP 
+              (Polypropylene Copolymer) injection-grade granules, focused on delivering 
+              consistent and dependable material for everyday injection moulding applications. 
+              We develop practical grades suited for products such as crates, dustbins, chairs, 
+              and general household and industrial moulded items, with an emphasis on stable 
+              melt flow and predictable machine performance.
             </p>
           </div>
 
           <div className="content-block fade-in">
             <p className="large-text">
-              Located in the industrial heartland of Dewar, Madhya Pradesh, our facility spans 
-              over 50,000 square feet and houses cutting-edge extrusion and spinning machinery. 
-              We employ over 100 skilled workers and technicians who bring craftsmanship and 
-              precision to every product. Our strategic location allows us to efficiently serve 
-              clients across India while maintaining cost-effective operations.
+              Established in 2024 and located in Sanwer, Indore, SJ Polyzen Industries operates 
+              with a process-driven approach centered on controlled sourcing, disciplined 
+              processing, and batch-wise quality checks. Our objective is to support injection 
+              moulders with reliable supply, reduced rejection, and long-term consistency, 
+              while contributing responsibly to the circular plastics economy.
             </p>
           </div>
 
@@ -91,21 +92,16 @@ const About = () => {
                 <li>
                   <FaCheckCircle className="list-icon" />
                   <span>
-                    To manufacture world-class polypropylene products that exceed 
-                    customer expectations
+                    To manufacture consistent and reliable recycled PPCP injection-grade 
+                    granules that help injection moulders achieve stable production with 
+                    minimal rejection
                   </span>
                 </li>
                 <li>
                   <FaCheckCircle className="list-icon" />
                   <span>
-                    To maintain sustainable and environmentally responsible 
-                    manufacturing practices
-                  </span>
-                </li>
-                <li>
-                  <FaCheckCircle className="list-icon" />
-                  <span>
-                    To continuously innovate and improve our product range and processes
+                    To promote responsible plastic recycling by converting PPCP waste into 
+                    dependable raw material through disciplined processes and continuous improvement
                   </span>
                 </li>
               </ul>
@@ -121,19 +117,15 @@ const About = () => {
                 <li>
                   <FaCheckCircle className="list-icon" />
                   <span>
-                    To become the most trusted polypropylene manufacturer in India by 2030
+                    To become a trusted recycled PPCP granules supplier in India, known for 
+                    consistency, transparency, and long-term reliability
                   </span>
                 </li>
                 <li>
                   <FaCheckCircle className="list-icon" />
                   <span>
-                    To expand our product portfolio and serve new markets globally
-                  </span>
-                </li>
-                <li>
-                  <FaCheckCircle className="list-icon" />
-                  <span>
-                    To set industry benchmarks for quality, innovation, and customer service
+                    To expand into higher-consistency recycled grades while setting practical 
+                    benchmarks for quality and sustainability in the plastics industry
                   </span>
                 </li>
               </ul>
@@ -147,7 +139,7 @@ const About = () => {
         <div className="container">
           <div className="stats-grid fade-in">
             <div className="stat-card">
-              <div className="stat-number">2015</div>
+              <div className="stat-number">2024</div>
               <div className="stat-label">Established</div>
             </div>
             <div className="stat-card">
@@ -155,11 +147,11 @@ const About = () => {
               <div className="stat-label">Sq. Ft. Facility</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">100+</div>
+              <div className="stat-number">10+</div>
               <div className="stat-label">Skilled Workers</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">1000+</div>
+              <div className="stat-number">100+</div>
               <div className="stat-label">Happy Clients</div>
             </div>
           </div>
