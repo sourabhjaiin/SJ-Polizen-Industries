@@ -101,9 +101,9 @@ const Footer = () => {
         <div className="footer-bottom-container">
           <p>&copy; 2024 SJ Polyzen Industries. All Rights Reserved.</p>
           <div className="footer-bottom-links">
-            <a href="#privacy">Privacy Policy</a>
+            <Link to="/privacy">Privacy Policy</Link>
             <span className="separator">|</span>
-            <a href="#terms">Terms & Conditions</a>
+            <Link to="/terms">Terms & Conditions</Link>
           </div>
         </div>
       </div>

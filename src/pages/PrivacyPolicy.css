@@ -1,0 +1,300 @@
+/**
+ * Privacy Policy Page Styles
+ * Clean, professional layout for legal/policy content
+ */
+
+/* Page Header */
+.privacy-header {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-color) 100%);
+  padding: 4rem 0;
+  text-align: center;
+  color: var(--white);
+}
+
+.privacy-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.privacy-main-icon {
+  font-size: 4rem;
+  color: var(--white);
+  opacity: 0.9;
+  animation: fadeInDown 0.8s ease;
+}
+
+.privacy-header .page-title {
+  font-size: 3rem;
+  margin: 0;
+  color: var(--white);
+  animation: fadeInUp 0.8s ease;
+}
+
+.last-updated {
+  font-size: 1rem;
+  opacity: 0.9;
+  font-style: italic;
+  animation: fadeInUp 1s ease;
+}
+
+/* Introduction Section */
+.privacy-intro-section {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.privacy-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+}
+
+/* Content Section */
+.privacy-content-section {
+  background-color: var(--white);
+  padding: 3rem 0 4rem;
+}
+
+.privacy-block {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+  background: var(--white);
+  border-left: 4px solid var(--primary-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.privacy-block:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.privacy-block-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.privacy-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.privacy-block-header h2 {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.privacy-block-content {
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.privacy-block-content p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.privacy-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.5rem 0;
+}
+
+.privacy-list li {
+  padding: 0.75rem 0 0.75rem 2rem;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.privacy-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.note-text {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 3px solid var(--secondary-color);
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Contact Section */
+.privacy-contact {
+  max-width: 900px;
+  margin: 4rem auto 0;
+  padding: 3rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.privacy-contact h2 {
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.privacy-contact > p {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+}
+
+.contact-details {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.contact-details p {
+  font-size: 1.1rem;
+  margin: 0.75rem 0;
+  color: var(--text-dark);
+}
+
+/* Fade-in Animation Support */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-header {
+    padding: 3rem 0;
+  }
+
+  .privacy-main-icon {
+    font-size: 3rem;
+  }
+
+  .privacy-header .page-title {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1.05rem;
+  }
+
+  .privacy-block {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .privacy-block-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .privacy-block-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .privacy-icon {
+    font-size: 1.5rem;
+  }
+
+  .privacy-block-content p {
+    font-size: 1rem;
+  }
+
+  .privacy-list li {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .privacy-contact {
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .privacy-contact h2 {
+    font-size: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 1.3rem;
+  }
+
+  .contact-details p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-header .page-title {
+    font-size: 1.75rem;
+  }
+
+  .privacy-block {
+    padding: 1rem;
+  }
+
+  .privacy-block-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .privacy-list li {
+    padding-left: 1.2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

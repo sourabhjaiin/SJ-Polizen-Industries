@@ -13,6 +13,8 @@ import About from './pages/About';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 import QualityPolicy from './pages/QualityPolicy';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 import Applications from './pages/Applications';
 import Contact from './pages/Contact';
 import './App.css';
@@ -47,6 +49,8 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/products/:productId" element={<ProductDetail />} />
             <Route path="/quality" element={<QualityPolicy />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsConditions />} />
             <Route path="/applications" element={<Applications />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
