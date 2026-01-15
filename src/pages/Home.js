@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaChevronDown, FaChevronUp, FaRecycle, FaLeaf, FaSeedling, FaWater, FaIndustry, FaHandHoldingHeart } from 'react-icons/fa';
 import './Home.css';
+import companyImage from '../assets/ind.jpeg'
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -119,9 +120,7 @@ const Home = () => {
           <div className="two-column-layout">
             {/* Image Column - TODO: Replace with actual company/factory image */}
             <div className="image-column fade-in">
-              <div className="placeholder-image large">
-                <span>Company Image</span>
-              </div>
+              <img src={companyImage} alt='SJ Polyzen Industries' className='company-image'/>    
             </div>
 
             {/* Content Column */}
