@@ -7,9 +7,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaChevronDown, FaChevronUp, FaRecycle, FaLeaf, FaSeedling, FaWater, FaIndustry, FaHandHoldingHeart } from 'react-icons/fa';
 import './Home.css';
-import companyImage from '../assets/ind.jpeg';
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -120,7 +119,9 @@ const Home = () => {
           <div className="two-column-layout">
             {/* Image Column - TODO: Replace with actual company/factory image */}
             <div className="image-column fade-in">
-              <img src={companyImage} alt="SJ Polyzen Industries" className='company-image'/>
+              <div className="placeholder-image large">
+                <span>Company Image</span>
+              </div>
             </div>
 
             {/* Content Column */}
@@ -146,7 +147,136 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Section 3: Our Products Preview */}
+      {/* Section 3: Making a Difference - Environmental Impact */}
+      <section className="section environmental-impact">
+        <div className="container">
+          <div className="environmental-header fade-in">
+            <FaLeaf className="env-main-icon" />
+            <h2 className="section-title">Making a Difference to the World We Live In</h2>
+            <p className="section-subtitle">
+              Every kilogram of recycled PPCP granule we produce is a step towards a cleaner planet. 
+              By choosing recycled materials, we're not just making products—we're protecting our environment 
+              for future generations.
+            </p>
+          </div>
+
+          <div className="impact-grid fade-in">
+            <div className="impact-card">
+              <div className="impact-icon">
+                <FaRecycle />
+              </div>
+              <h3>Waste Reduction</h3>
+              <p>
+                Diverting plastic waste from landfills and converting it into valuable raw material, 
+                reducing environmental pollution and conserving natural resources.
+              </p>
+            </div>
+
+            <div className="impact-card">
+              <div className="impact-icon">
+                <FaSeedling />
+              </div>
+              <h3>Carbon Footprint</h3>
+              <p>
+                Recycled plastic production uses significantly less energy compared to virgin plastic 
+                manufacturing, helping reduce greenhouse gas emissions.
+              </p>
+            </div>
+
+            <div className="impact-card">
+              <div className="impact-icon">
+                <FaHandHoldingHeart />
+              </div>
+              <h3>Circular Economy</h3>
+              <p>
+                Contributing to a sustainable circular economy by keeping materials in use longer, 
+                minimizing waste, and promoting responsible consumption.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Recycle Today for Better Tomorrow */}
+      <section className="section recycle-process">
+        <div className="container">
+          <div className="recycle-header fade-in">
+            <h2 className="section-title">Recycle Today for a Better Tomorrow</h2>
+            <p className="section-subtitle">
+              Our comprehensive recycling process ensures the highest quality while protecting the environment
+            </p>
+          </div>
+
+          <div className="process-steps fade-in">
+            <div className="process-step">
+              <div className="step-number">1</div>
+              <div className="step-icon">
+                <FaRecycle />
+              </div>
+              <h4>Source Segregation</h4>
+              <p>Carefully selected PPCP waste material collection from verified sources</p>
+            </div>
+
+            <div className="process-step">
+              <div className="step-number">2</div>
+              <div className="step-icon">
+                <FaIndustry />
+              </div>
+              <h4>Sorting & Inspection</h4>
+              <p>Rigorous manual sorting to remove contaminants and ensure material purity</p>
+            </div>
+
+            <div className="process-step">
+              <div className="step-number">3</div>
+              <div className="step-icon">
+                <FaWater />
+              </div>
+              <h4>Triple Hot Washing</h4>
+              <p>Hot washed 3 times with industrial-grade chemicals for thorough cleaning</p>
+            </div>
+
+            <div className="process-step">
+              <div className="step-number">4</div>
+              <div className="step-icon">
+                <FaRecycle />
+              </div>
+              <h4>Granulation</h4>
+              <p>Advanced processing to convert cleaned material into consistent injection-grade granules</p>
+            </div>
+
+            <div className="process-step">
+              <div className="step-number">5</div>
+              <div className="step-icon">
+                <FaLeaf />
+              </div>
+              <h4>Zero Landfilling</h4>
+              <p>100% material utilization—no waste goes to landfills, ensuring complete sustainability</p>
+            </div>
+          </div>
+
+          <div className="sustainability-stats fade-in">
+            <div className="stat-item">
+              <div className="stat-icon">♻️</div>
+              <div className="stat-number">100%</div>
+              <div className="stat-label">Recycled Material</div>
+            </div>
+            
+            <div className="stat-item">
+              <div className="stat-icon">🌱</div>
+              <div className="stat-number">Zero</div>
+              <div className="stat-label">Landfill Waste</div>
+            </div>
+            
+            <div className="stat-item">
+              <div className="stat-icon">💧</div>
+              <div className="stat-number">3x</div>
+              <div className="stat-label">Hot Washed</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5: Our Products Preview */}
       <section id="products-preview" className="section products-preview">
         <div className="container">
           <h2 className="section-title fade-in">Our Products</h2>
@@ -197,7 +327,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Section 4: Quality Commitment */}
+      {/* Section 6: Quality Commitment */}
       <section className="section quality-commitment">
         <div className="container">
           <div className="quality-banner fade-in">
@@ -221,7 +351,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Section 5: Contact Us Brief */}
+      {/* Section 7: Contact Us Brief */}
       <section className="section contact-brief">
         <div className="container">
           <div className="contact-brief-content fade-in">
@@ -255,7 +385,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Section 6: FAQ Section */}
+      {/* Section 8: FAQ Section */}
       <section className="section faq-section">
         <div className="container">
           <h2 className="section-title fade-in">Frequently Asked Questions</h2>
