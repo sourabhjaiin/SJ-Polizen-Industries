@@ -643,7 +643,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 3rem;
-  background: linear-gradient(135deg, #135A96, #2AAEC1);
+  background: linear-gradient(135deg, #76c3de, #5ec9da);
   padding: 3rem 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(42, 174, 193, 0.3);
@@ -677,8 +677,9 @@
 
 .stat-label {
   font-size: 1.1rem;
-  opacity: 0.95;
+  opacity: 0.75;
   font-weight: 500;
+  color: black !important;
 }
 
 /* Responsive adjustments for environmental sections */
