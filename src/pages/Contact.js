@@ -9,7 +9,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   FaMapMarkerAlt, 
   FaEnvelope, 
-  FaPhone, 
+  FaPhoneAlt, 
   FaInstagram, 
   FaLinkedin,
   FaCheckCircle,
@@ -234,7 +234,7 @@ const Contact = () => {
             {/* Container 3: Phone */}
             <div className="contact-info-card">
               <div className="info-card-icon">
-                <FaPhone />
+                <FaPhoneAlt />
               </div>
               <h3>Phone</h3>
               <div className="info-card-content">
