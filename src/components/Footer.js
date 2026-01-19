@@ -15,6 +15,7 @@ import {
   FaLinkedin 
 } from 'react-icons/fa';
 import './Footer.css';
+import logo from '../assets/logo.png'
 
 const Footer = () => {
   return (
@@ -23,9 +24,8 @@ const Footer = () => {
         {/* Column 1: About Us */}
         <div className="footer-column">
           <h3 className="footer-heading">SJ Polyzen Industries</h3>
-          {/* TODO: Replace with actual company logo */}
-          <div className="footer-logo-placeholder">
-            <div className="footer-logo-box">Logo</div>
+          <div className='footer-logo-placeholder'>
+              <img src={logo} alt='SJ Polyzen Industries' className='footer-logo-img'/>
           </div>
           <p className="footer-description">
             Manufacturer of recycled PPCP injection-grade granules, delivering consistent 

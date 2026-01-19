@@ -9,6 +9,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css';
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,10 +54,8 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo Section - Left Side */}
         <Link to="/" className="navbar-logo">
-          {/* TODO: Replace with actual company logo image */}
-          <div className="logo-placeholder">
-            <span className="logo-text">SJ Polyzen Industries</span>
-          </div>
+          <img src={logo} alt='SJ Polyzen Industries' className='logo-img'/>
+          <span className="logo-text">SJ Polyzen Industries</span>
         </Link>
 
         {/* Navigation Links - Right Side (Desktop) */}

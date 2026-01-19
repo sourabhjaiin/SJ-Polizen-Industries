@@ -35,6 +35,13 @@
   margin-bottom: 1rem;
 }
 
+.footer-logo-img{
+  height: 60px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+}
+
 .footer-logo-box {
   width: 150px;
   height: 60px;
