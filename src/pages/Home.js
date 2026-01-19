@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import { FaChevronDown, FaChevronUp, FaRecycle, FaLeaf, FaSeedling, FaWater, FaIndustry, FaHandHoldingHeart } from 'react-icons/fa';
 import './Home.css';
 import companyImage from '../assets/ind.jpeg'
+import black from '../assets/Products_img/black.png'
+import colored from '../assets/Products_img/colored.png'
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -285,7 +287,7 @@ const Home = () => {
             <div className="product-card">
               {/* TODO: Replace with actual product image */}
               <div className="product-image">
-                <span>Black PPCP Granules</span>
+                <img src ={black} alt='Black PPCP Granules' className='product-img'/>
               </div>
               <div className="product-info">
                 <h3>Black PPCP Injection Grade Granules</h3>
@@ -303,10 +305,10 @@ const Home = () => {
             <div className="product-card">
               {/* TODO: Replace with actual product image */}
               <div className="product-image">
-                <span>Colour/Black Granules</span>
+                <img src={colored} alt='Colored Granules' className='product-img'/>
               </div>
               <div className="product-info">
-                <h3>Colour/Black Granules</h3>
+                <h3>Coloured PPCP Granules</h3>
                 <p>
                   Low-filler recycled PPCP granules for applications requiring higher 
                   impact strength, better surface finish, and improved consistency.

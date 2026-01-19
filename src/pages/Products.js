@@ -7,6 +7,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Products.css';
+import black from '../assets/Products_img/black.png'
+import colored from '../assets/Products_img/colored.png'
 
 const Products = () => {
   /**
@@ -38,14 +40,13 @@ const Products = () => {
       id: 'black-ppcp-granules',
       name: 'Black PPCP Injection Grade Granules',
       description: 'Black PPCP recycled granules suitable for general injection moulding applications requiring good impact strength and stable flow.',
-      image: null // TODO: Add actual product image
+      image: black 
     },
     {
       id: 'premium-ppcp-granules',
-      name: 'Colour/Black Granules',
+      name: 'Coloured PPCP Granules',
       description: 'Low-filler recycled PPCP granules developed for applications requiring higher impact strength, better surface finish, and improved consistency.',
-      image: null // TODO: Add actual product image
-    }
+      image: colored}
   ];
 
   return (
@@ -66,9 +67,12 @@ const Products = () => {
           <div className="products-main-grid">
             {products.map((product, index) => (
               <div key={product.id} className="product-main-card fade-in">
-                {/* Product Image - TODO: Replace with actual images */}
                 <div className="product-main-image">
-                  <span>{product.name}</span>
+                  {product.image?(
+                    <img src={product.image} alt={product.name} className='product-img'/>
+                  ):(
+                    <span>{product.name}</span>
+                  )}
                 </div>
 
                 {/* Product Information */}

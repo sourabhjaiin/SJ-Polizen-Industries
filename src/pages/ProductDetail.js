@@ -9,6 +9,8 @@ import React, { useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import './ProductDetail.css';
+import black from '../assets/Products_img/black.png'
+import colored from '../assets/Products_img/colored.png'
 
 const ProductDetail = () => {
   const { productId } = useParams();
@@ -42,6 +44,7 @@ const ProductDetail = () => {
     'black-ppcp-granules': {
       name: 'Black PPCP Injection Grade Granules',
       description: 'Black PPCP recycled granules suitable for general injection moulding applications requiring good impact strength and stable flow. These granules deliver consistent quality for injection moulding, making them ideal for manufacturers producing crates, bins, chairs, and other moulded products.',
+      image:black,
       specifications: [
         { property: 'MFI', specification: '8–12' },
         { property: 'Application', specification: 'Crates, bins, chairs' },
@@ -52,8 +55,9 @@ const ProductDetail = () => {
       ]
     },
     'premium-ppcp-granules': {
-      name: 'Colour/Black Granules',
+      name: 'Coloured PPCP Granules',
       description: 'Low-filler recycled Coloured/Black PPCP granules developed for injection moulding applications that require higher impact strength, better surface finish, and improved consistency compared to standard grades. This grade is suitable for moulders looking to reduce breakage, improve cycle stability, and maintain consistent performance across batches.',
+      image:colored,
       specifications: [
         { property: 'MFI', specification: '8–11' },
         { property: 'Application', specification: 'Heavy-duty crates, chair components, thick-wall moulded products' },
@@ -99,10 +103,12 @@ const ProductDetail = () => {
           {/* Product Image and Description */}
           <div className="product-detail-content fade-in">
             <div className="product-detail-image">
-              {/* TODO: Replace with actual product image */}
-              <div className="detail-placeholder-image">
+              {product.image?(
+                <img src={product.image} alt={product.name} className='detail-product-img'/>
+              ):(<div className="detail-placeholder-image">
                 <span>{product.name}</span>
-              </div>
+              </div>)}
+              
             </div>
             
             <div className="product-detail-text">
