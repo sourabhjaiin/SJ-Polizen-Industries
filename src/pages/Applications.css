@@ -43,7 +43,22 @@
   width: 100%;
   height: 250px;
   overflow: hidden;
+  background-color: var(--light-beige);
 }
+
+.application-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.application-item:hover .application-img {
+  transform: scale(1.1);
+}
+
 
 .image-placeholder {
   width: 100%;

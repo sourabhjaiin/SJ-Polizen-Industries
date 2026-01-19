@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 import { 
   FaMapMarkerAlt, 
   FaEnvelope, 
-  FaPhone, 
+  FaPhoneAlt, 
   FaInstagram, 
   FaLinkedin 
 } from 'react-icons/fa';
@@ -65,7 +65,7 @@ const Footer = () => {
             </div>
             
             <div className="contact-item">
-              <FaPhone className="contact-icon" />
+              <FaPhoneAlt className="contact-icon" />
               <div>
                 <a href="tel:+918719824566">+91 8719824566</a>
                 <a href="tel:+919628517463">+91 9628517463</a>

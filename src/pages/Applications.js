@@ -6,6 +6,14 @@
 
 import React, { useEffect } from 'react';
 import './Applications.css';
+import cratesImage from '../assets/Application_img/crates.png'
+import dustbinImg from '../assets/Application_img/dustbin.png'
+import chairImg from '../assets/Application_img/chair.png'
+import bucketImg from '../assets/Application_img/bucket.png'
+import injectionImg from '../assets/Application_img/injectionmolded.png'
+import containerImg from '../assets/Application_img/container.png'
+import automobileImg from '../assets/Application_img/automobile.png'
+import customImg from '../assets/Application_img/custom.png'
 
 const Applications = () => {
   /**
@@ -35,14 +43,15 @@ const Applications = () => {
 
   // Applications data
   const applications = [
-    { id: 1, name: 'Crates & Pallets', description: 'Durable injection-moulded crates and pallets for logistics, storage, and industrial handling.' },
-    { id: 2, name: 'Dustbins & Waste Management Products', description: 'Injection-moulded bins and containers designed for municipal, commercial, and industrial use.' },
-    { id: 3, name: 'Chairs & Furniture Components', description: 'Chair bases, legs, wheels, and structural components requiring good impact strength and durability.' },
-    { id: 4, name: 'Household Utility Products', description: 'Buckets, tubs, containers, and general household moulded items for daily use.' },
-    { id: 5, name: 'Industrial Injection Moulded Parts', description: 'General-purpose industrial components where consistent processing and cost efficiency are critical.' },
-    { id: 6, name: 'Storage Boxes & Containers', description: 'Injection-moulded storage solutions used in homes, warehouses, and factories.' },
-    { id: 7, name: 'Automotive Non-Critical Components', description: 'Non-load bearing and interior plastic parts where recycled PPCP is suitable (selective use).' },
-    { id: 8, name: 'Custom Injection Moulded Applications', description: 'Application-specific moulded products developed in consultation with customer requirements.' }
+
+    { id: 1, name: 'Crates & Pallets', description: 'Durable injection-moulded crates and pallets for logistics, storage, and industrial handling.',image: cratesImage },
+    { id: 2, name: 'Dustbins & Waste Management Products', description: 'Injection-moulded bins and containers designed for municipal, commercial, and industrial use.', image: dustbinImg },
+    { id: 3, name: 'Chairs & Furniture Components', description: 'Chair bases, legs, wheels, and structural components requiring good impact strength and durability.', image: chairImg },
+    { id: 4, name: 'Household Utility Products', description: 'Buckets, tubs, containers, and general household moulded items for daily use.', image: bucketImg },
+    { id: 5, name: 'Industrial Injection Moulded Parts', description: 'General-purpose industrial components where consistent processing and cost efficiency are critical.' ,image:injectionImg },
+    { id: 6, name: 'Storage Boxes & Containers', description: 'Injection-moulded storage solutions used in homes, warehouses, and factories.', image:containerImg },
+    { id: 7, name: 'Automotive Non-Critical Components', description: 'Non-load bearing and interior plastic parts where recycled PPCP is suitable (selective use).',image: automobileImg },
+    { id: 8, name: 'Custom Injection Moulded Applications', description: 'Application-specific moulded products developed in consultation with customer requirements.', image: customImg }
   ];
 
   return (
@@ -67,11 +76,18 @@ const Applications = () => {
                 className="application-item fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* TODO: Replace with actual application images */}
+                
                 <div className="application-image">
-                  <div className="image-placeholder">
+                  {
+                    app.image? (
+                      <img src={app.image} alt={app.name} className='application-img'/>
+                    ):(
+                      <div className="image-placeholder">
                     <span>{app.name}</span>
                   </div>
+                    )
+                  }
+                  
                 </div>
                 
                 <div className="application-info">
