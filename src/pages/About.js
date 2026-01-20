@@ -7,6 +7,7 @@
 import React, { useEffect } from 'react';
 import { FaCheckCircle, FaEye, FaBullseye } from 'react-icons/fa';
 import './About.css';
+import team from '../assets/team.png'
 
 const About = () => {
   /**
@@ -70,10 +71,7 @@ const About = () => {
 
           {/* Image Placeholder */}
           <div className="about-image-container fade-in">
-            {/* TODO: Replace with actual factory/team image */}
-            <div className="placeholder-large-image">
-              <span>Factory & Team Image</span>
-            </div>
+            <img src={team} alt='Factory and Team' className='about-team-img'/>
           </div>
         </div>
       </section>
@@ -143,7 +141,7 @@ const About = () => {
               <div className="stat-label">Established</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">50,000+</div>
+              <div className="stat-number">10,000+</div>
               <div className="stat-label">Sq. Ft. Facility</div>
             </div>
             <div className="stat-card">
