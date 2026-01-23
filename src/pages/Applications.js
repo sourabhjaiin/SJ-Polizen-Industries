@@ -44,14 +44,14 @@ const Applications = () => {
   // Applications data
   const applications = [
 
-    { id: 1, name: 'Crates & Pallets', description: 'Durable injection-moulded crates and pallets for logistics, storage, and industrial handling.',image: cratesImage },
-    { id: 2, name: 'Dustbins & Waste Management Products', description: 'Injection-moulded bins and containers designed for municipal, commercial, and industrial use.', image: dustbinImg },
-    { id: 3, name: 'Chairs & Furniture Components', description: 'Chair bases, legs, wheels, and structural components requiring good impact strength and durability.', image: chairImg },
-    { id: 4, name: 'Household Utility Products', description: 'Buckets, tubs, containers, and general household moulded items for daily use.', image: bucketImg },
-    { id: 5, name: 'Industrial Injection Moulded Parts', description: 'General-purpose industrial components where consistent processing and cost efficiency are critical.' ,image:injectionImg },
-    { id: 6, name: 'Storage Boxes & Containers', description: 'Injection-moulded storage solutions used in homes, warehouses, and factories.', image:containerImg },
-    { id: 7, name: 'Automotive Non-Critical Components', description: 'Non-load bearing and interior plastic parts where recycled PPCP is suitable (selective use).',image: automobileImg },
-    { id: 8, name: 'Custom Injection Moulded Applications', description: 'Application-specific moulded products developed in consultation with customer requirements.', image: customImg }
+    { id: 1, name: 'Crates & Pallets', description: 'Durable injection-moulded crates and pallets for logistics and industrial handling.',image: cratesImage },
+    { id: 2, name: 'Dustbins & Waste Management Products', description: 'Injection-moulded bins and containers for municipal, and commercial use.', image: dustbinImg },
+    { id: 3, name: 'Chairs & Furniture Components', description: 'Chair bases, legs, wheels, and load-bearing parts.', image: chairImg },
+    { id: 4, name: 'Household Utility Products', description: 'Buckets, tubs, containers, and everyday utility items.', image: bucketImg },
+    { id: 5, name: 'Industrial Injection Moulded Parts', description: 'Industrial parts where performance and cost matter.' ,image:injectionImg },
+    { id: 6, name: 'Storage Boxes & Containers', description: 'Injection-moulded storage solutions for homes and warehouses.', image:containerImg },
+    { id: 7, name: 'Automotive Non-Critical Components', description: 'Non-load bearing and interior automotive components.',image: automobileImg },
+    { id: 8, name: 'Custom Injection Moulded Applications', description: 'Tailored material grades developed per customer trials.', image: customImg }
   ];
 
   return (
@@ -61,7 +61,7 @@ const Applications = () => {
         <div className="container">
           <h1 className="page-title">Applications of Our Products</h1>
           <p className="page-subtitle">
-            Supporting Everyday Injection Moulding Applications
+            We Support a Range of Injection-Moulded Applications with Dependable Recycled PPCP Granules
           </p>
         </div>
       </section>

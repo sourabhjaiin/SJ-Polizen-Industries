@@ -5,11 +5,11 @@
  * Real-time form validation with error handling
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   FaMapMarkerAlt, 
   FaEnvelope, 
-  FaPhoneAlt, 
+  FaPhone, 
   FaInstagram, 
   FaLinkedin,
   FaCheckCircle,
@@ -19,6 +19,9 @@ import emailjs from 'emailjs-com';
 import './Contact.css';
 
 const Contact = () => {
+  // Form ref for EmailJS
+  const formRef = useRef();
+  
   // Form state
   const [formData, setFormData] = useState({
     name: '',
@@ -63,16 +66,28 @@ const Contact = () => {
    */
   const handleChange = (e) => {
     const { name, value } = e.target;
+    
+    // Map EmailJS form field names to our state field names
+    const fieldMap = {
+      'from_name': 'name',
+      'from_email': 'email',
+      'city': 'city',
+      'mobile': 'mobile',
+      'message': 'message'
+    };
+    
+    const stateField = fieldMap[name] || name;
+    
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [stateField]: value
     }));
 
     // Clear error for this field
-    if (errors[name]) {
+    if (errors[stateField]) {
       setErrors(prev => ({
         ...prev,
-        [name]: ''
+        [stateField]: ''
       }));
     }
   };
@@ -117,11 +132,11 @@ const Contact = () => {
   };
 
   /**
-   * Handle form submission
+   * Handle form submission using sendForm (more reliable)
    * IMPORTANT: Email sending functionality using EmailJS
-   * Sends email to: jainsourabh2@johndeere.com
+   * Sends email to: sourabhsj1970@gmail.com
    */
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     // Validate form
@@ -134,51 +149,57 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    try {
-      // TODO: Configure EmailJS with your credentials
-      // Sign up at https://www.emailjs.com/
-      // Create a service, template, and get your public key
-      
-      // EmailJS configuration (Replace with your actual credentials)
-      const serviceId = 'YOUR_SERVICE_ID'; // Replace with your EmailJS service ID
-      const templateId = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS template ID
-      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS public key
+    // EmailJS configuration
+    const serviceId = 'service_8t7oc9m';
+    const templateId = 'template_xyezwzc';
+    const publicKey = 'uEat1G4ulm-5MQ7rc';
 
-      // Prepare email parameters
-      const emailParams = {
-        to_email: 'jainsourabh2@johndeere.com',
-        from_name: formData.name,
-        from_email: formData.email,
-        city: formData.city,
-        mobile: formData.mobile,
-        message: formData.message
-      };
+    console.log('Attempting to send email using sendForm...');
 
-      // Send email using EmailJS
-      await emailjs.send(serviceId, templateId, emailParams, publicKey);
+    // Use sendForm instead of send - it's more reliable
+    emailjs
+      .sendForm(serviceId, templateId, formRef.current, publicKey)
+      .then(
+        (response) => {
+          console.log('✅ Email sent successfully:', response);
+          
+          // Success
+          setSubmitStatus('success');
+          setFormData({
+            name: '',
+            email: '',
+            city: '',
+            mobile: '',
+            message: ''
+          });
+          setIsSubmitting(false);
 
-      // Success
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        city: '',
-        mobile: '',
-        message: ''
-      });
-
-      // Clear success message after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000);
-
-    } catch (error) {
-      console.error('Error sending email:', error);
-      setSubmitStatus('error');
-      
-      // Clear error message after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000);
-    } finally {
-      setIsSubmitting(false);
-    }
+          // Clear success message after 5 seconds
+          setTimeout(() => setSubmitStatus(null), 5000);
+        },
+        (error) => {
+          console.error('❌ Error sending email:', error);
+          
+          // More detailed error logging
+          if (error.status === 0) {
+            console.error('Network error - request blocked. Possible causes:');
+            console.error('1. Browser extension (ad blocker) is blocking the request');
+            console.error('2. Firewall/antivirus blocking api.emailjs.com');
+            console.error('3. Invalid EmailJS credentials');
+            console.error('4. Network connectivity issue');
+            alert('Email sending failed due to network blocking.\n\nPlease try:\n1. Disable ad blockers/privacy extensions\n2. Try in incognito mode\n3. Check if api.emailjs.com is accessible\n4. Verify EmailJS credentials in dashboard');
+          } else {
+            console.error('Error details:', error.text || error.message);
+            alert(`Failed to send email: ${error.text || error.message || 'Unknown error'}`);
+          }
+          
+          setSubmitStatus('error');
+          setIsSubmitting(false);
+          
+          // Clear error message after 5 seconds
+          setTimeout(() => setSubmitStatus(null), 5000);
+        }
+      );
   };
 
   /**
@@ -234,7 +255,7 @@ const Contact = () => {
             {/* Container 3: Phone */}
             <div className="contact-info-card">
               <div className="info-card-icon">
-                <FaPhoneAlt />
+                <FaPhone />
               </div>
               <h3>Phone</h3>
               <div className="info-card-content">
@@ -283,14 +304,17 @@ const Contact = () => {
               Fill out the form below and we'll get back to you as soon as possible
             </p>
 
-            <form onSubmit={handleSubmit} className="contact-form">
+            <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
+              {/* Hidden field for recipient email */}
+              <input type="hidden" name="to_email" value="sourabhsj1970@gmail.com" />
+              
               {/* Name Field */}
               <div className="form-group">
                 <label htmlFor="name">Name <span className="required">*</span></label>
                 <input
                   type="text"
                   id="name"
-                  name="name"
+                  name="from_name"
                   value={formData.name}
                   onChange={handleChange}
                   className={errors.name ? 'error' : ''}
@@ -309,7 +333,7 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
-                  name="email"
+                  name="from_email"
                   value={formData.email}
                   onChange={handleChange}
                   className={errors.email ? 'error' : ''}
