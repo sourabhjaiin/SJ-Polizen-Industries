@@ -29,7 +29,7 @@ const Footer = () => {
           </div>
           <p className="footer-description">
             Manufacturer of recycled PPCP injection-grade granules, delivering consistent 
-            quality and reliable supply for injection moulding applications since 2024.
+            quality and reliable supply for injection moulding applications since 2025.
           </p>
         </div>
 
@@ -101,7 +101,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>&copy; 2026 SJ Polyzen Industries. All Rights Reserved.</p>
+          <p>&copy; 2025 SJ Polyzen Industries. All Rights Reserved.</p>
           <div className="footer-bottom-links">
             <Link to="/privacy">Privacy Policy</Link>
             <span className="separator">|</span>
