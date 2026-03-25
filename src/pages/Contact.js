@@ -294,7 +294,7 @@ const Contact = () => {
                 <span>Instagram</span>
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/sj-polyzen/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link linkedin"

@@ -86,7 +86,7 @@ const Footer = () => {
                 <FaInstagram />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/company/sj-polyzen/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
