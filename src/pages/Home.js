@@ -366,14 +366,13 @@ const Home = () => {
               <div className="contact-info-item">
                 <div className="info-icon">📧</div>
                 <h4>Email</h4>
-                <p>sjpolyzen@gmail.com</p>
+                <p>admin@sjpolyzen.com</p>
               </div>
               
               <div className="contact-info-item">
                 <div className="info-icon">📞</div>
                 <h4>Phone</h4>
-                <p>+91 8719824566</p>
-                <p>+91 9628517463</p>
+                <p>+91 6266902550</p>
               </div>
             </div>
 

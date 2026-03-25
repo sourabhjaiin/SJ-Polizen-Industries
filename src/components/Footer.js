@@ -54,21 +54,23 @@ const Footer = () => {
               <FaMapMarkerAlt className="contact-icon" />
               <div>
                 <p>399 LIG Mukharjee Nagar</p>
-                <p>Dewar, Madhya Pradesh</p>
+                <p>Dewas, Madhya Pradesh</p>
                 <p>PIN: 455001, India</p>
               </div>
             </div>
             
             <div className="contact-item">
               <FaEnvelope className="contact-icon" />
-              <a href="mailto:sjpolyzen@gmail.com">sjpolyzen@gmail.com</a>
+              <div>
+                <a href="mailto:admin@sjpolyzen.com">admin@sjpolyzen.com</a>
+                <a href="mailto:support@sjpolyzen.com">support@sjpolyzen.com</a>
+              </div>
             </div>
             
             <div className="contact-item">
               <FaPhoneAlt className="contact-icon" />
               <div>
-                <a href="tel:+918719824566">+91 8719824566</a>
-                <a href="tel:+919628517463">+91 9628517463</a>
+                <a href="tel:+918719824566">+91 6266902550</a>
               </div>
             </div>
 
@@ -99,7 +101,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>&copy; 2024 SJ Polyzen Industries. All Rights Reserved.</p>
+          <p>&copy; 2026 SJ Polyzen Industries. All Rights Reserved.</p>
           <div className="footer-bottom-links">
             <Link to="/privacy">Privacy Policy</Link>
             <span className="separator">|</span>

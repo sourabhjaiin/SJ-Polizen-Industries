@@ -78,18 +78,22 @@ const Contact = () => {
     
     const stateField = fieldMap[name] || name;
     
-    setFormData(prev => ({
-      ...prev,
-      [stateField]: value
-    }));
+    console.log(`Field changed - Input name: "${name}" → State field: "${stateField}" → Value: "${value}"`);
+    
+    setFormData(prev => {
+      const updated = {
+        ...prev,
+        [stateField]: value
+      };
+      console.log('Updated formData:', updated);
+      return updated;
+    });
 
     // Clear error for this field
-    if (errors[stateField]) {
-      setErrors(prev => ({
-        ...prev,
-        [stateField]: ''
-      }));
-    }
+    setErrors(prev => ({
+      ...prev,
+      [stateField]: ''
+    }));
   };
 
   /**
@@ -150,11 +154,19 @@ const Contact = () => {
     setSubmitStatus(null);
 
     // EmailJS configuration
-    const serviceId = 'service_8t7oc9m';
-    const templateId = 'template_xyezwzc';
-    const publicKey = 'uEat1G4ulm-5MQ7rc';
+    const serviceId = 'service_uwfdm6s';
+    const templateId = 'template_t2s2m3k';
+    const publicKey = 'kO6c9pD9P9Hwi6Ke3';
 
     console.log('Attempting to send email using sendForm...');
+    console.log('Form data:', formData);
+    console.log('Form ref current:', formRef.current);
+    
+    // Debug: Log all form field values
+    const formElements = formRef.current.elements;
+    for (let i = 0; i < formElements.length; i++) {
+      console.log(`Form field [${i}]: name="${formElements[i].name}", value="${formElements[i].value}"`);
+    }
 
     // Use sendForm instead of send - it's more reliable
     emailjs
@@ -236,7 +248,7 @@ const Contact = () => {
               <div className="info-card-content">
                 <p>SJ Polyzen Industries</p>
                 <p>399 LIG Mukharjee Nagar</p>
-                <p>Dewar, Madhya Pradesh</p>
+                <p>Dewas, Madhya Pradesh</p>
                 <p>PIN: 455001, India</p>
               </div>
             </div>
@@ -248,7 +260,8 @@ const Contact = () => {
               </div>
               <h3>Email</h3>
               <div className="info-card-content">
-                <a href="mailto:sjpolyzen@gmail.com">sjpolyzen@gmail.com</a>
+                <a href="mailto:admin@sjpolyzen.com">admin@sjpolyzen.com</a>
+                <a href="mailto:info@sjpolyzen.com">info@sjpolyzen.com</a>
               </div>
             </div>
 
@@ -259,8 +272,8 @@ const Contact = () => {
               </div>
               <h3>Phone</h3>
               <div className="info-card-content">
-                <a href="tel:+918719824566">+91 8719824566</a>
-                <a href="tel:+919628517463">+91 9628517463</a>
+                <a href="tel:+918719824566">+91 6266902550</a>
+                
               </div>
             </div>
           </div>
